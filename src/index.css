@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* 100 - Thin */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-Thin.ttf") format("truetype");
+  }
+
+  /* 200 - ExtraLight */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-ExtraLight.ttf") format("truetype");
+  }
+
+  /* 300 - Light */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-Light.ttf") format("truetype");
+  }
+
+  /* 400 - Regular */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-Regular.ttf") format("truetype");
+  }
+
+  /* 500 - Medium */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-Medium.ttf") format("truetype");
+  }
+
+  /* 600 - SemiBold */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-SemiBold.ttf") format("truetype");
+  }
+
+  /* 700 - Bold */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-Bold.ttf") format("truetype");
+  }
+
+  /* 800 - ExtraBold */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-ExtraBold.ttf") format("truetype");
+  }
+
+  /* 900 - Black */
+  @font-face {
+    font-family: "vazirmatn";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("./fonts/vazirmatn/Vazirmatn-Black.ttf") format("truetype");
+  }
+
+  body {
+    @apply font-vazirmatn;
+  }
+}
