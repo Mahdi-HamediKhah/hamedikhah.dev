@@ -21,37 +21,34 @@ function ContactApp() {
 
   const submithandler = (event) => {
     event.preventDefault();
-    console.log(error.invalidInput);
-    event.target[0].value.length === 0
-      ? setError(() => ({
-          name: true,
-          invalidInput: "نام",
-        }))
-      : event.target[1].value.length === 0
-        ? setError(() => ({
-            name: true,
-            invalidInput: "نام خانوادگی",
-          }))
-        : event.target[2].value.length === 0
-          ? setError(() => ({
-              name: true,
-              invalidInput: "ایمیل",
-            }))
-          : event.target[3].value.length !== 11 ||
-              event.target[3].value[0] !== "0" ||
-              event.target[3].value[1] !== "9"
-            ? setError(() => ({
-                name: true,
-                invalidInput: "شماره همراه (با فرمت 09xxxxxxxxx)",
-              }))
-            : contactHandler();
-    setContactForm({
-      name: "",
-      family: "",
-      number: "",
-      email: "",
-    });
+
+    const name = event.target[0].value.trim();
+    const family = event.target[1].value.trim();
+    const email = event.target[2].value.trim();
+    const number = event.target[3].value.trim();
+
+    const invalidInput =
+      name.length === 0
+        ? "نام"
+        : family.length === 0
+          ? "نام خانوادگی"
+          : email.length === 0
+            ? "ایمیل"
+            : number.length !== 11 || number[0] !== "0" || number[1] !== "9"
+              ? "شماره همراه (با فرمت 09xxxxxxxxx)"
+              : "";
+
+    invalidInput
+      ? setError({ name: true, invalidInput })
+      : (contactHandler(),
+        setContactForm({
+          name: "",
+          family: "",
+          number: "",
+          email: "",
+        }));
   };
+
   const contactHandler = () => {
     const newContact = {
       id: crypto.randomUUID(),
@@ -68,11 +65,15 @@ function ContactApp() {
     <section className="flex flex-col gap-8 justify-center items-center py-12 bg-zinc-50 h-full">
       <h1 className="text-blue-700 text-3xl font-black">پروژه مخاطبین</h1>
       <h3>
-        <span className="bg-blue-300 p-1">حامدیخواه</span> | پروژه ری اکت
+        <span className="bg-blue-300 p-1">حامدیخواه</span> | پروژه ری اکت و
+        تیلویند
       </h3>
       <div className="rounded-xl w-2/3 flex flex-col py-5 bg-white shadow-blue-200 shadow-2xl">
-        <form className="flex flex-col gap-5" onSubmit={submithandler}>
-          <h5 className="text-xl font-bold text-center">
+        <form
+          className="flex flex-col md:grid md:grid-cols-2 gap-5"
+          onSubmit={submithandler}
+        >
+          <h5 className="text-xl font-bold text-center md:col-span-full">
             مخاطب خود را اضافه کنید.
           </h5>
           <input
@@ -108,7 +109,7 @@ function ContactApp() {
             placeholder="شماره همراه"
           />
           <button
-            className="border-2 border-black rounded-lg w-[80%] mt-5 mx-auto py-1 bg-blue-600 text-white "
+            className="border-2 border-black rounded-lg w-[80%] mt-5 mx-auto py-1 bg-blue-600 text-white md:col-span-full hover:bg-blue-700 transition-colors duration-300"
             type="submit"
           >
             افزودن مخاطب
