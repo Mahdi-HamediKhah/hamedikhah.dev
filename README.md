@@ -1,16 +1,66 @@
-# React + Vite
+Mahdi Hamedikhah – Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code of my personal website built with React + Vite + Tailwind CSS.
 
-Currently, two official plugins are available:
+🔗 Live Website:
+https://hamedikhadev.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 About The Website
 
-## React Compiler
+This website serves as my personal portfolio where I showcase:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+My projects
 
-## Expanding the ESLint configuration
+Technical skills
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Contact information
+
+Practical React projects (including the Contacts App)
+
+📂 Pages & Features
+📇 Contacts App
+
+A React-based contact management page featuring:
+
+Add new contact
+
+Form validation
+
+Delete contact
+
+Responsive layout
+
+State management with React Hooks
+
+(More pages will be added soon...)
+
+🛠 Tech Stack
+
+React (Functional Components + Hooks)
+
+Vite
+
+Tailwind CSS
+
+Responsive Design
+
+Modern JavaScript (ES6+)
+
+🔮 Future Improvements
+
+Dark Mode
+
+More portfolio projects
+
+Blog section
+
+Performance optimization
+
+TypeScript migration
+
+👨‍💻 Author
+
+Mahdi Hamedikhah
+GitHub: https://github.com/Mahdi-HamediKhah
+
+Live Website: https://hamedikhadev.netlify.app/

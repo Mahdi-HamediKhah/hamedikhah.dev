@@ -22,10 +22,10 @@ function ContactApp() {
   const submithandler = (event) => {
     event.preventDefault();
 
-    const name = event.target[0].value.trim();
-    const family = event.target[1].value.trim();
-    const email = event.target[2].value.trim();
-    const number = event.target[3].value.trim();
+    const name = contactForm.name.trim();
+    const family = contactForm.family.trim();
+    const email = contactForm.email.trim();
+    const number = contactForm.number.trim();
 
     const invalidInput =
       name.length === 0
@@ -56,9 +56,9 @@ function ContactApp() {
     };
     setContacts((prevContacts) => [...prevContacts, newContact]);
   };
-  const removeContact = (index) => {
+  const removeContact = (id) => {
     setContacts((prevContacts) =>
-      prevContacts.filter((contact, i) => i !== index),
+      prevContacts.filter((contact) => contact.id !== id),
     );
   };
   return (

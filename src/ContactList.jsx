@@ -1,5 +1,4 @@
 function ContactList({ contacts, removeContact }) {
-
   return (
     <div className="bg-white my-5 p-2 min-h-32 flex flex-col items-center justify-center rounded-xl">
       {contacts.length === 0 ? (
@@ -31,7 +30,7 @@ function ContactList({ contacts, removeContact }) {
 
                 <button
                   className="flex gap-4 justify-center items-center md:w/1/5"
-                  onClick={() => removeContact(contacts.indexOf(contact))}
+                  onClick={() => removeContact(contact.id)}
                 >
                   <img
                     src="/src/assets/trash-icon.png"
