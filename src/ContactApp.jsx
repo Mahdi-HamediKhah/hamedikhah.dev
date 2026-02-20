@@ -38,15 +38,16 @@ function ContactApp() {
               ? "شماره همراه (با فرمت 09xxxxxxxxx)"
               : "";
 
-    invalidInput
+    (invalidInput
       ? setError({ name: true, invalidInput })
-      : (contactHandler(),
-        setContactForm({
-          name: "",
-          family: "",
-          number: "",
-          email: "",
-        }));
+      : setError({ name: false, invalidInput: "" }),
+      (contactHandler(),
+      setContactForm({
+        name: "",
+        family: "",
+        number: "",
+        email: "",
+      })));
   };
 
   const contactHandler = () => {
